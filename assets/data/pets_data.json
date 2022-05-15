@@ -1,0 +1,60 @@
+{
+  "animals": [
+    {
+      "name": "Sparky",
+      "breed": "Golden Retriver",
+      "gender": "Female",
+      "age": "8 months old",
+      "distance": "2.5 kms away",
+      "description": "She is shy at first, but will warm up when she's comfortable. She is not a ranch dog that guards animals and property as she would rather be with her people; but she is comfortable around animals.",
+      "backgroundColor": "0xfffee46b",
+      "allImages": [
+        "assets/images/dogs/sparky/sparky_1.png",
+        "assets/images/dogs/sparky/sparky_2.png",
+        "assets/images/dogs/sparky/sparky_3.png"
+      ]
+    },
+    {
+      "name": "Charlie",
+      "breed": "Boston Terrier",
+      "gender": "Male",
+      "age": "1.5 years old",
+      "distance": "2.6 kms away",
+      "description": "He is shy at first, but will warm up when he's comfortable. He is not a ranch dog that guards animals and property as he would rather be with her people; but he is comfortable around animals.",
+      "backgroundColor": "0xff84cbca",
+      "allImages": [
+        "assets/images/dogs/charlie/charlie_1.png",
+        "assets/images/dogs/charlie/charlie_2.png",
+        "assets/images/dogs/charlie/charlie_3.png"
+      ]
+    },
+    {
+      "name": "Zoe",
+      "breed": "Jack Russel Terrier",
+      "gender": "Female",
+      "description": "She is shy at first, but will warm up when she's comfortable. She is not a ranch dog that guards animals and property as she would rather be with her people; but she is comfortable around animals.",
+      "age": "1.5 years old",
+      "distance": "2.7 kms away",
+      "backgroundColor": "0xffb9d89d",
+      "allImages": [
+        "assets/images/dogs/zoe/zoe_1.png",
+        "assets/images/dogs/zoe/zoe_1.png",
+        "assets/images/dogs/zoe/zoe_1.png"
+      ]
+    },
+    {
+      "name": "Daisy",
+      "breed": "Border Collie",
+      "gender": "Female",
+      "age": "7 months old",
+      "distance": "3.1 kms away",
+      "description": "She is shy at first, but will warm up when she's comfortable. She is not a ranch dog that guards animals and property as she would rather be with her people; but she is comfortable around animals.",
+      "backgroundColor": "0xffffaa79",
+      "allImages": [
+        "assets/images/dogs/daisy/daisy_1.png",
+        "assets/images/dogs/daisy/daisy_1.png",
+        "assets/images/dogs/daisy/daisy_1.png"
+      ]
+    }
+  ]
+}
