@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
       alignment: Alignment.bottomRight,
       child: SizedBox(
         width: size.width * 0.6,
-        height: size.height * 0.08,
+        height: size.height * 0.073,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             primary: Theme.of(context).primaryColor,

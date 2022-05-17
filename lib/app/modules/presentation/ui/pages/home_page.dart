@@ -48,15 +48,7 @@ class HomePage extends StatelessWidget {
                                 '/details',
                                 arguments: animals[index],
                               ),
-                              child: CustomAnimalCard(
-                                name: animals[index].name,
-                                breed: animals[index].breed,
-                                gender: animals[index].gender,
-                                age: animals[index].age,
-                                distance: animals[index].distance,
-                                colorHex: animals[index].colorHex,
-                                allImages: animals[index].allImages,
-                              ),
+                              child: CustomAnimalCard(animal: animals[index]),
                             );
                           },
                         );

@@ -24,10 +24,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Location', style: Theme.of(context).textTheme.headline5),
+                Text('Location', style: Theme.of(context).textTheme.headline6),
                 Text(
                   'Camera St., Boston',
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.headline4,
                 ),
               ],
             ),

@@ -46,9 +46,9 @@ class CustomFilterCard extends StatelessWidget {
                     style: value
                         ? Theme.of(context)
                             .textTheme
-                            .headline3!
+                            .headline4!
                             .copyWith(color: Colors.white)
-                        : Theme.of(context).textTheme.headline3,
+                        : Theme.of(context).textTheme.headline4,
                   )
                 ],
               ),

@@ -16,10 +16,7 @@ class _CustomRowFilterState extends State<CustomRowFilter> {
 
     return SliverToBoxAdapter(
       child: Padding(
-        padding: const EdgeInsets.only(
-          left: 25,
-          top: 25,
-        ),
+        padding: const EdgeInsets.only(left: 25, top: 25),
         child: Row(
           children: [
             Padding(

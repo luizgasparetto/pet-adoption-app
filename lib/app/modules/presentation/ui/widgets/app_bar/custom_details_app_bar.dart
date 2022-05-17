@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 
 class CustomDetailsAppBar extends StatelessWidget
     implements PreferredSizeWidget {
-  CustomDetailsAppBar({Key? key}) : super(key: key);
+  const CustomDetailsAppBar({Key? key}) : super(key: key);
 
   @override
   Size get preferredSize => const Size.fromHeight(100);
-  bool selected = false;
 
   @override
   Widget build(BuildContext context) {
-    ValueNotifier<bool> selected = ValueNotifier(false);
     final size = MediaQuery.of(context).size;
+
+    ValueNotifier<bool> selected = ValueNotifier(false);
 
     return Container(
       color: Theme.of(context).backgroundColor,
@@ -42,12 +42,13 @@ class CustomDetailsAppBar extends StatelessWidget
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: IconButton(
-                        icon: Icon(
-                          Icons.favorite,
-                          color: Theme.of(context).primaryColor,
-                          size: size.width * 0.075,
-                        ),
-                        onPressed: () => selected.value = !selected.value),
+                      icon: Icon(
+                        Icons.favorite,
+                        color: Theme.of(context).primaryColor,
+                        size: size.width * 0.075,
+                      ),
+                      onPressed: () => selected.value = !selected.value,
+                    ),
                   );
                 } else {
                   return IconButton(

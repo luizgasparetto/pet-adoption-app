@@ -13,16 +13,17 @@ class AnimalDetailsPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final animal = ModalRoute.of(context)!.settings.arguments as AnimalEntity;
 
+    // Melhor colocar isso num initState de uma stateful ou dxar assim como está na stateless?
     final animalIcon =
         animal.gender == 'Male' ? CustomIcons.male : CustomIcons.female;
 
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      appBar: CustomDetailsAppBar(),
+      appBar: const CustomDetailsAppBar(),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 10, right: 20, left: 30),
+            padding: const EdgeInsets.only(right: 20, left: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -31,10 +32,7 @@ class AnimalDetailsPage extends StatelessWidget {
                   children: [
                     Text(
                       animal.name,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline2!
-                          .copyWith(fontSize: 34),
+                      style: Theme.of(context).textTheme.headline1,
                     ),
                     Icon(
                       animalIcon,
@@ -48,11 +46,11 @@ class AnimalDetailsPage extends StatelessWidget {
                   children: [
                     Text(
                       animal.breed,
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                     ),
                     Text(
                       animal.age,
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.headline4,
                     )
                   ],
                 ),
@@ -67,10 +65,7 @@ class AnimalDetailsPage extends StatelessWidget {
                     SizedBox(width: size.width * 0.01),
                     Text(
                       animal.distance,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline5!
-                          .copyWith(fontSize: 15),
+                      style: Theme.of(context).textTheme.headline4,
                     )
                   ],
                 ),
@@ -82,23 +77,17 @@ class AnimalDetailsPage extends StatelessWidget {
             child: CustomAnimalPhotos(animal: animal),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20, left: 30, top: 20),
+            padding: const EdgeInsets.only(right: 20, left: 30, top: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "About",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline2!
-                      .copyWith(fontSize: 22),
-                ),
+                Text("About", style: Theme.of(context).textTheme.headline2),
                 Text(
                   animal.description,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline5!
-                      .copyWith(fontSize: 13),
+                  style: const TextStyle(
+                    color: Color.fromARGB(255, 198, 195, 195),
+                    fontSize: 13,
+                  ),
                 ),
               ],
             ),

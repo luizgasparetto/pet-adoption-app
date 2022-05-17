@@ -3,25 +3,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:pet_adoption_app/app/core/utils/custom_icons.dart';
+import 'package:pet_adoption_app/app/modules/domain/entities/animal_entity.dart';
 
 class CustomAnimalCard extends StatelessWidget {
-  final String name;
-  final String breed;
-  final String gender;
-  final String age;
-  final String distance;
-  final String colorHex;
-  final List<String> allImages;
+  final AnimalEntity animal;
 
   CustomAnimalCard({
     Key? key,
-    required this.name,
-    required this.breed,
-    required this.gender,
-    required this.age,
-    required this.distance,
-    required this.colorHex,
-    required this.allImages,
+    required this.animal,
   }) : super(key: key);
 
   ValueNotifier<bool> selected = ValueNotifier(false);
@@ -33,7 +22,7 @@ class CustomAnimalCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Container(
-        height: size.height * 0.16,
+        height: size.height * 0.18,
         decoration: BoxDecoration(
           color: Theme.of(context).backgroundColor,
           borderRadius: BorderRadius.circular(20),
@@ -46,13 +35,13 @@ class CustomAnimalCard extends StatelessWidget {
                 width: size.width * 0.27,
                 height: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(int.parse(colorHex)),
+                  color: Color(int.parse(animal.colorHex)),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: SizedBox(
                   height: size.height * 0.2,
                   child: Image.asset(
-                    allImages[0],
+                    animal.allImages[0],
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -64,16 +53,16 @@ class CustomAnimalCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      name,
-                      style: Theme.of(context).textTheme.headline2,
+                      animal.name,
+                      style: Theme.of(context).textTheme.headline3,
                     ),
                     Text(
-                      breed,
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                    Text(
-                      '$gender, $age',
+                      animal.breed,
                       style: Theme.of(context).textTheme.headline5,
+                    ),
+                    Text(
+                      '${animal.gender}, ${animal.age}',
+                      style: Theme.of(context).textTheme.headline6,
                     ),
                     SizedBox(height: size.height * 0.015),
                     Row(
@@ -85,8 +74,8 @@ class CustomAnimalCard extends StatelessWidget {
                         ),
                         SizedBox(width: size.width * 0.01),
                         Text(
-                          distance,
-                          style: Theme.of(context).textTheme.headline5,
+                          animal.distance,
+                          style: Theme.of(context).textTheme.headline6,
                         )
                       ],
                     ),
@@ -99,6 +88,7 @@ class CustomAnimalCard extends StatelessWidget {
                 child: ValueListenableBuilder<bool>(
                   valueListenable: selected,
                   builder: (_, value, ___) {
+                    // Qual a melhor forma de fazer essa validação para trocar o botão?
                     return IconButton(
                       onPressed: () => selected.value = !selected.value,
                       icon: value

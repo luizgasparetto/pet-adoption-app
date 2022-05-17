@@ -29,7 +29,7 @@ class CustomAnimalPhotos extends StatelessWidget {
               },
             ),
           ),
-          const SizedBox(width: 30),
+          SizedBox(width: size.width * 0.07),
           Stack(
             children: [
               Container(
